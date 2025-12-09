@@ -1,6 +1,6 @@
  // 1: House object
         let house = {
-            owner: "Mr. Ahmed",
+            owner: "Mr. Muaawiya",
             location: "Hodan, Mogadishu",
             rooms: 5
         };
@@ -8,12 +8,12 @@
         console.log("HOUSE OBJECT:");
         console.log(house.owner);
         console.log(house.location);
-        console.log(house.rooms);
+        console.log("QOLOSHA", + house.rooms);
 
         let employee = {
-            fullName: "Amina Mohamed",
+            fullName: "Auub yuusuf alasow",
             position: "Software Developer",
-            salary: 1200
+            salary: 1600
         };
 
         console.log("EMPLOYEE OBJECT:");
@@ -28,7 +28,7 @@
             this.year = year;
         }
 
-        let car3 = new Car("Toyota", "Land Cruiser V8", 2020);
+        let car3 = new Car("hoomey", "buruuj V16", 2024);
 
         console.log("CAR OBJECT (Constructor):");
         console.log(car3.brand);
@@ -37,9 +37,9 @@
 
         // 4: Laptop object
         let laptop = {
-            name: "HP Pavilion",
+            name: "HP elitebook",
             processor: "Core i7",
-            year: 2022
+            year: 2026
         };
 
         console.log("LAPTOP OBJECT:");
@@ -50,7 +50,7 @@
         // 5: Countries array
         let countries = [
             { name: "Somalia", capital: "Mogadishu", population: 17000000 },
-            { name: "Kenya", capital: "Nairobi", population: 54000000 },
+            { name: "kenya", capital: "Nairobi", population: 54000000 },
             { name: "Turkey", capital: "Ankara", population: 85000000 },
             { name: "Qatar", capital: "Doha", population: 2900000 }
         ];
@@ -65,20 +65,20 @@
         //QEEBTA LABAD
 
         // 1. Bedel property-ga object
-let houseE = { owner: "Mr. Ahmed", location: "Hodan", rooms: 5 };
+let houseE = { owner: "Mr. Muaawiya", location: "Hodan", rooms: 5 };
 houseE.rooms = 6; // rooms ka bedelay
 console.log("1. House Object:");
 console.log(houseE);
 
 // 2. Ku dar property cusub
-let employeeE = { fullName: "Amina Mohamed", position: "Developer", salary: 1200 };
+let employeeE = { fullName: "Ayuub yuusuf", position: "Developer", salary: 1600 };
 employeeE.department = "IT"; // department ku daray
 console.log("2. Employee Object:");
 console.log(employeeE);
 
 // 3. Method-ka object
 let person = {
-    name: "Ali",
+    name: "Muawiya",
     greet: function() {
         return "Hello " + this.name;
     }
@@ -111,7 +111,7 @@ for (let i = 0; i < values.length; i++) {
 }
 
 // 5. JSON creation
-let student = { name: "Zahra", age: 22, major: "CS" };
+let student = { name: "Aiaha", age: 22, major: "ICT" };
 let studentJSON = JSON.stringify(student);
 console.log("5. JSON String (Student):");
 console.log(studentJSON);
