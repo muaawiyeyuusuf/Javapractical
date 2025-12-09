@@ -8,7 +8,7 @@
         console.log("HOUSE OBJECT:");
         console.log(house.owner);
         console.log(house.location);
-        console.log("QOLOSHA", + house.rooms);
+        console.log(house.rooms);
 
         let employee = {
             fullName: "Auub yuusuf alasow",
@@ -78,7 +78,7 @@ console.log(employeeE);
 
 // 3. Method-ka object
 let person = {
-    name: "Muawiya",
+    name: "AYUUB",
     greet: function() {
         return "Hello " + this.name;
     }
@@ -111,7 +111,7 @@ for (let i = 0; i < values.length; i++) {
 }
 
 // 5. JSON creation
-let student = { name: "Aiaha", age: 22, major: "ICT" };
+let student = { name: "JAMIILA", age: 22, major: "ICT" };
 let studentJSON = JSON.stringify(student);
 console.log("5. JSON String (Student):");
 console.log(studentJSON);
