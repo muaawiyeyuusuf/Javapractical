@@ -1826,9 +1826,7 @@ function showAbout() {
     page.appendChild(mainContent);
     main.appendChild(page);
 }
-// ============================================
 //  CONTACT PAGE 
-// ============================================
 function showContact() {
     const page = document.createElement('div');
     page.style.cssText = 'background: white; border-radius: 10px; padding: 30px; margin-bottom: 30px; border: 1px solid #ddd; max-width: 600px; margin: 0 auto;';
@@ -1883,24 +1881,9 @@ function showContact() {
     emailGroup.appendChild(emailLabel);
     emailGroup.appendChild(emailInput);
     
-    // Subject Field
-    const subjectGroup = document.createElement('div');
-    subjectGroup.style.cssText = 'margin-bottom: 20px;';
+ 
     
-    const subjectLabel = document.createElement('label');
-    subjectLabel.textContent = 'Subject *';
-    subjectLabel.style.cssText = 'display: block; color: #2c3e50; margin-bottom: 8px; font-weight: bold;';
-    
-    const subjectInput = document.createElement('input');
-    subjectInput.type = 'text';
-    subjectInput.id = 'contactSubject';
-    subjectInput.placeholder = 'Enter message subject';
-    subjectInput.style.cssText = 'width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; color: #333; font-size: 16px; box-sizing: border-box;';
-    
-    subjectGroup.appendChild(subjectLabel);
-    subjectGroup.appendChild(subjectInput);
-    
-    // Message Field
+    // Message 
     const messageGroup = document.createElement('div');
     messageGroup.style.cssText = 'margin-bottom: 20px;';
     
@@ -1916,17 +1899,14 @@ function showContact() {
     messageGroup.appendChild(messageLabel);
     messageGroup.appendChild(messageInput);
     
-    // Submit Button
     const submitBtn = document.createElement('button');
     submitBtn.type = 'button';
     submitBtn.textContent = 'Send Message';
     submitBtn.style.cssText = 'background: #3498db; color: white; border: none; padding: 15px 30px; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold; width: 100%;';
     
-    // Form Validation with ALERT ONLY
     submitBtn.onclick = function() {
         const name = document.getElementById('contactName').value.trim();
         const email = document.getElementById('contactEmail').value.trim();
-        const subject = document.getElementById('contactSubject').value.trim();
         const message = document.getElementById('contactMessage').value.trim();
         
         let isValid = true;
@@ -1952,14 +1932,7 @@ function showContact() {
         }
         
         // Validate Subject
-        if (!subject) {
-            errorMessages.push('Subject is required');
-            isValid = false;
-        } else if (subject.length < 3) {
-            errorMessages.push('Subject must be at least 3 characters');
-            isValid = false;
-        }
-        
+       
         if (!message) {
             errorMessages.push('farinta wa qasab');
             isValid = false;
@@ -1977,18 +1950,15 @@ function showContact() {
         
         document.getElementById('contactName').value = '';
         document.getElementById('contactEmail').value = '';
-        document.getElementById('contactSubject').value = '';
         document.getElementById('contactMessage').value = '';
         
       alert('Contact form submitted successfully!');
        ('Name: ' + name);
         ('Email: ' + email);
-        ('Subject: ' + subject);
     };
     
     form.appendChild(nameGroup);
     form.appendChild(emailGroup);
-    form.appendChild(subjectGroup);
     form.appendChild(messageGroup);
     form.appendChild(submitBtn);
     
