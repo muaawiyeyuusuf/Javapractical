@@ -1767,9 +1767,8 @@ function showAbout() {
             desc: 'E-Learning platform project with interactive courses'
         },
         { 
-            name: 'Dugsiiye Educational Portal', 
-            url: 'https://dugsiiye.com/', 
-            desc: 'Somali educational website for learning resources'
+            name: 'webflow.com', 
+            url: 'https://webflow.com/made-in-webflow/javascript', 
         }
     ];
     
