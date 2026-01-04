@@ -1762,9 +1762,9 @@ function showAbout() {
     
     const references = [
         { 
-            name: 'Alasow E-Learning Platform', 
-            url: 'https://muaawiyeyuusuf.github.io/Alasow-elarning/', 
-            desc: 'My own E-Learning platform project with interactive courses'
+            name: 'udemy.com', 
+            url: 'https://www.udemy.com/course/java-se-programming/?utm_campaign=BG-Search_Keyword_Beta_Prof_la.EN_cc.ROW-English&utm_source=bing&utm_medium=paid-search&portfolio=Bing-ROW-English&utm_audience=mx&utm_tactic=nb&utm_term=best%20java%20learning%20websites&utm_content=o&funnel=&test=&utm_campaign_id=638596232&msclkid=6e1affc2c58f1ee5c0f79698c7febdf1', 
+            desc: 'E-Learning platform project with interactive courses'
         },
         { 
             name: 'Dugsiiye Educational Portal', 
@@ -1960,45 +1960,38 @@ function showContact() {
             isValid = false;
         }
         
-        // Validate Message
         if (!message) {
-            errorMessages.push('Message is required');
+            errorMessages.push('farinta wa qasab');
             isValid = false;
-        } else if (message.length < 10) {
+        } else if (message.length < 1) {
             errorMessages.push('Message must be at least 10 characters');
             isValid = false;
         }
         
         if (!isValid) {
-            // Show ALERT with errors
             alert('Please fix the following errors:\n\n' + errorMessages.join('\n'));
             return;
         }
         
-        // Success - show success alert
         alert('Message sent successfully!\n\nThank you for contacting me. I will get back to you soon.');
         
-        // Clear form
         document.getElementById('contactName').value = '';
         document.getElementById('contactEmail').value = '';
         document.getElementById('contactSubject').value = '';
         document.getElementById('contactMessage').value = '';
         
-        // Show success message in output panel
       alert('Contact form submitted successfully!');
        ('Name: ' + name);
         ('Email: ' + email);
         ('Subject: ' + subject);
     };
     
-    // Build Form
     form.appendChild(nameGroup);
     form.appendChild(emailGroup);
     form.appendChild(subjectGroup);
     form.appendChild(messageGroup);
     form.appendChild(submitBtn);
     
-    // My Contact Info
     const contactInfo = document.createElement('div');
     contactInfo.style.cssText = 'margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; border: 1px solid #ddd;';
     
@@ -2035,14 +2028,13 @@ function showContact() {
     contactInfo.appendChild(infoTitle);
     contactInfo.appendChild(infoList);
     
-    // Assemble Page
+  
     page.appendChild(form);
     page.appendChild(contactInfo);
     main.appendChild(page);
 }
 
-// ============================================
-// FUNCTIONS TO SHOW MESSAGE PANEL
+
 
 function createExample(title, code, buttonText, clickHandler) {
     const example = document.createElement('div');
@@ -2077,9 +2069,7 @@ function createExample(title, code, buttonText, clickHandler) {
     return example;
 }
 
-// ============================================
-// FOOTER (AT BOTTOM OF PAGE)
-// ============================================
+
 const footer = document.createElement('footer');
 footer.style.cssText = 'background: #2c3e50; color: white; padding: 20px; text-align: center; margin-top: auto;';
 
@@ -2105,7 +2095,5 @@ footer.appendChild(footerContent);
 document.body.appendChild(footer);
 
 
-// Show home page by default
 showHome();
-
 
